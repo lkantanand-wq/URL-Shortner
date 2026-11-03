@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="left-nav">
+        <a href="/">URL Shortener</a>
+    </div>
+    <div class="right-nav">
+        <% if (typeof user !== 'undefined' && user) { %>
+            <% if (path === "/") { %>
+                <span style="color: white; margin-right: 10px;">Welcome, <%= user.name %></span>
+                <a href="/user/logout">Logout</a>
+            <% } else { %>
+                <span style="color: white; margin-right: 10px;">Welcome, <%= user.name %></span>
+            <% } %>
+        <% } else { %>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        <% } %>
+    </div>
+</nav>
